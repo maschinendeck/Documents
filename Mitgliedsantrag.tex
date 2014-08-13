@@ -1,0 +1,122 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{amssymb} % needed for math
+\usepackage{amsmath} % needed for math
+\usepackage[utf8]{inputenc} % this is needed for german umlauts
+\usepackage[ngerman]{babel} % this is needed for german umlauts
+\usepackage[T1]{fontenc}    % this is needed for correct output of umlauts in pdf
+\usepackage[margin=2.5cm]{geometry} %layout
+\usepackage{marvosym}
+\usepackage{hyperref}  % this is needed for forms and links within the text
+
+\renewcommand*{\DefaultHeightofTextMultiline}{6\baselineskip} 
+\renewcommand*{\LayoutTextField}[2]{\makebox[8em][l]{#1 } \raisebox{\baselineskip}{\raisebox{-\height}{#2}}}
+
+\def\LayoutChoiceField#1#2{\makebox[4em][l]{#1}#2}
+\newdimen\longline
+\longline=\textwidth\advance\longline-6em
+
+\begin{document}
+
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+\newdimen\longline
+\longline=\textwidth\advance\longline-8em
+
+\section*{\centering{Aufnahmeantrag}}
+
+Hiermit beantrage ich die Mitgliedschaft im Verein Maschinendeck e.V.
+
+\subsection*{Persönliche Daten}
+\begin{Form}
+\TextField[name=Vorname,width=\longline,borderwidth=0,bordersep=4pt,backgroundcolor={.85 .85 .85}]{Vorname:}\\
+\\
+\TextField[name=Name,width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{Name:}\\
+\\
+\TextField[name=Name,width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{Geburtsdatum:}\\
+\\
+\TextField[name=Strasse,width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{Straße, Nr.:}\\
+\\
+\TextField[name=plz,width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{PLZ Ort:}\\
+\\
+\TextField[name=email,width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{E-Mail:}\\
+\end{Form}
+
+\subsection*{Mitgliedschaft}
+\begin{Form}
+\ChoiceMenu[borderwidth=0,radio,default=n,name=mitgliegschaft]{\mbox{}}{Normales Mitglied=m,Fördermitglied=f}\\
+\end{Form}
+
+{
+\centering{Ich erkenne die Satzung und Beitragsordnung des Vereins an.\\}
+}
+
+\vspace{4em}
+
+\noindent\begin{tabular}{ll}
+\makebox[8 cm]{\hrulefill} & \makebox[8 cm]{\hrulefill}\\
+Ort, Datum & Unterschrift \\[8ex]% adds space between the two sets of signatures
+\makebox[8 cm]{} & \makebox[8 cm]{\hrulefill}\\
+ & \makebox[8 cm]{(bei Minderjährigen Unterschrift des Erziehungsberechtigten)}\\
+\end{tabular}
+
+\vspace{2em}
+%\hrule{}
+\vspace{1em}
+{\centering{Auszufüllen vom Vorstand:}\\}
+\vspace{2em}
+\noindent Der Antrag wurde angenommen und die Aufnahmegebühr von 10\EUR{} ist eingegangen.\\
+
+\noindent Beginn der Mitgliedschaft:\hspace{1em}\hrulefill
+
+\vspace{2em}
+\noindent\begin{tabular}{ll}
+\makebox[8 cm]{\hrulefill} & \makebox[8 cm]{\hrulefill}\\
+Ort, Datum & Unterschrift des Vorstands \\[8ex]% adds space between the two sets of signatures
+\end{tabular}
+
+
+%\newpage
+%\section*{\centering{SEPA-Lastschriftmandat}}
+
+%\noindent{}Gläubiger-Identifikationsnummer: DE12345612345\\
+
+%\noindent{}\begin{Form}
+%\renewcommand*{\LayoutTextField}[2]{\makebox[8em][l]{#1 } \raisebox{\baselineskip}{\raisebox{-\height}{#2}}}
+%\newdimen\longline
+%\longline=\textwidth\advance\longline-8em
+
+%\noindent\TextField[width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{Mandatsreferenz:}\\
+%\end{Form}
+
+%\noindent{}Ich ermächtige den Verein Maschinendeck e.V., Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich meine Kreditinstitut an, die vom Verein Maschinendeck e.V. auf mein Konto gezogenen Lastschriften einzulösen.\\
+%Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen.\\
+
+%\noindent{}\begin{Form}
+%\renewcommand*{\LayoutTextField}[2]{\makebox[8em][l]{#1 } \raisebox{\baselineskip}{\raisebox{-\height}{#2}}}
+%\newdimen\longline
+%\longline=\textwidth\advance\longline-8em
+
+%\noindent\TextField[width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{Kreditinstitut:}\\
+%\\
+%\TextField[width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{BLZ:}\\
+%\\
+%\TextField[width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{BIC:}\\
+%\\
+%\TextField[width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{Konto-Inhaber:}\\
+%\\
+%\TextField[width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{Konto-Nr.:}\\
+%\\
+%\TextField[width=\longline,borderwidth=0, backgroundcolor={.85 .85 .85},]{IBAN:}\\
+%\\
+%Die Daten werden zur Vereinsverwaltung während der Mitgliedschaft gespeichert.
+%\end{Form}
+
+%\vspace{5em}
+%\noindent\begin{tabular}{ll}
+%\makebox[4 cm]{\hrulefill} & \makebox[12 cm]{\hrulefill}\\
+%Ort, Datum & Unterschrift (bei Minderjährigen Unterschrift des Erziehungsberechtigten) \\[8ex]% adds space between the two sets of signatures
+%\end{tabular}
+
+%\vspace{4em}
+%\noindent(Bei Minderjährigen ist die Unterschrift des/r Erziehungsberechtigten zwingend erforderlich. Mit der Unterschrift erklärt/en sich der/die Erziehungs- berechtigte/n bereit, die Beitragszahlung bis zu Volljährigkeit des Kindes zu übernehmen.)
+
+\end{document}
