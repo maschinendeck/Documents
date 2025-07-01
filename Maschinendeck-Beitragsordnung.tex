@@ -1,21 +1,25 @@
 \documentclass[parskip=half]{scrreprt}
-\usepackage[ngerman]{babel} 
+\usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc} 
-\usepackage[juratotoc]{scrjura}
+\usepackage[T1]{fontenc}
+\usepackage[juratotoc]{contract}
+%\usepackage[con]{•}
 \usepackage{enumerate}
-\usepackage{marvosym}
+%\usepackage{marvosym}
+
+\begin{document}
 
 \newcommand{\associationName}{Maschinendeck} %Vereinsname (ohne e.V.)
-\newcommand{\issuedOnDate}{23.7.2014} %wann beschlossen
-\newcommand{\membershipFee}{15 \EUR{}} %Mitgliedsbeitrag
-\newcommand{\admissionFee}{10 \EUR{}} %Aufnahmegebühr
+\newcommand{\issuedOnDate}{23.9.2024} %wann beschlossen
+\newcommand{\membershipFeeTier1}{5 \EUR{}}   %Mitgliedsbeitrag Tier1
+\newcommand{\membershipFeeTier2}{15 \EUR{}}  %Mitgliedsbeitrag Tier2
+\newcommand{\menbershipFeeTier3}{25 \EUR{}}  %Mitgliedsbeitrag Tier3
+\newcommand{\admissionFee}{10 \EUR{}}        %Aufnahmegebühr
 \newcommand{\reminderFee}{5 \EUR{}} %Mahngebühr
 \newcommand{\contactMail}{office@maschienendeck.org} %e-mail Adresse für Änderungen der Mitgliedsdaten
 
-\begin{document}
 \KOMAoptions{ref=nosentence}
-	
+
 \title{Beitragsordnung des \associationName{} e.V.} 
 \subtitle{beschlossen am \issuedOnDate{}}
 \author{} 
@@ -28,22 +32,26 @@
 \begin{contract}
 
 Gemäß der Satzung des \associationName{} e.V. haben Mitglieder die von der Mitgliederversammlung festgelegten Beiträge zu entrichten. Das Nähere bestimmt die nachstehende Beitragsordnung. 
-                                        
+
 \Paragraph{title={Beiträge}}
 
-Der monatliche Beitrag für den \associationName{} e.V. beträgt \membershipFee{}.
+Der monatliche Beitrag für den \associationName{} e.V.
+  für reguläre Mitglieder beträgt \membershipFeeTier3{}
+  für Fördermitglieder beträgt \membershipFeeTier2{}
 
-Die Mitglieder halten ihre Mitgliedsdaten aktuell. Vorzugsweise werden Änderungen an die E-Mailadresse \contactMail{} mitgeteilt.                              
+  Der ermäßigte Beitrag für den \associationName{} e.V. beträgt \membershipFeeTier1{}
+
+Die Mitglieder halten ihre Mitgliedsdaten aktuell. Vorzugsweise werden Änderungen an die E-Mailadresse \contactMail{} mitgeteilt.
 
 \Paragraph{title={Aufnahmegebühr}}
 
 Die Aufnahmegebühr wird bei Aufnahme in den Verein fällig. Sie ist bei Stellung des Aufnahmeantrages einzuzahlen. Im Falle, dass der Vorstand den Aufnahmeantrag ablehnt, wird die Aufnahmegebühr zurückerstattet.
 
-Die Aufnahmegebühr beträgt \admissionFee{}. Die Mitgliedschaft beginnt, sobald der Aufnahmeantrag angenommen wurde und Aufnahmegebühr und Mitgliedsbeitrag bezahlt wurden. 
-                                        
-\Paragraph{title={Entrichtung der Beiträge}}
+Die Aufnahmegebühr beträgt \admissionFee{}. Die Mitgliedschaft beginnt, sobald der Aufnahmeantrag angenommen wurde und Aufnahmegebühr und Mitgliedsbeitrag bezahlt wurden.
 
-Der Mitgliedsbeitrag kann jährlich, halbjährlich oder monatlich entrichtet werden.                                         
+Paragraph{title={Entrichtung der Beiträge}}
+
+Der Mitgliedsbeitrag kann jährlich, halbjährlich oder monatlich entrichtet werden.
 
 Der Beitrag ist binnen vier Wochen nach Annahme des Aufnahmeantrages und folgend jeweils zum 31. Januar eines neuen Jahres unaufgefordert zu entrichten. Bei halbjährlicher Zahlungsweise ist der Beitrag jeweils zum 31. Januar und 31. Juli zu entrichten. Bei monatlicher Zahlungsweise jeweils zum letzten des Monats.  
 
@@ -68,3 +76,4 @@ Diese Beitragsordnung ersetzt alle vorher beschlossenen Beitragsordnungen.
 \end{contract}
  
 \end{document}
+
